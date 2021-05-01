@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
+    android:background="@color/bg_app_2"
     android:orientation="vertical"
     tools:context=".src.module.favourite.view.FavouriteFragment">
 
@@ -26,13 +26,14 @@
             android:src="@drawable/ic_heart_checked" />
 
         <TextView
+            android:layout_marginTop="5dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:fontFamily="@font/oswald"
             android:gravity="center"
             android:text="@string/favourite_empty"
             android:textColor="@color/colorBlack"
-            android:textSize="@dimen/text_size_30" />
+            android:textSize="@dimen/text_size_15" />
 
 
     </LinearLayout>
@@ -64,16 +65,17 @@
 
             />
 
-
     </LinearLayout>
-
+    <LinearLayout
+        android:gravity="center"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
     <com.jpardogo.android.googleprogressbar.library.GoogleProgressBar
         android:id="@+id/progress_favourite"
         android:layout_width="50dp"
         android:layout_height="50dp"
-        android:layout_gravity="center"
         android:background="@drawable/round_icon_cart"
-        android:gravity="center"
         android:visibility="visible"
         gpb:type="nexus_rotation_cross" />
+    </LinearLayout>
 </LinearLayout>

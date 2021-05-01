@@ -1,5 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.core.widget.NestedScrollView
+    android:background="@color/bg_app_2"
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -11,8 +13,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-
         <FrameLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
@@ -24,7 +24,8 @@
 
             </com.chabbal.slidingdotsplash.SlidingSplashView>
 
-            <View
+            <ImageView
+                android:id="@+id/imgProduct"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:background="@drawable/gradient_black_transparent" />
@@ -45,17 +46,18 @@
                 android:src="@drawable/ic_favorite_border_black_24dp" />
 
             <TextView
+                android:background="@color/cardview_shadow_start_color"
                 android:id="@+id/txtNameFoodDetails"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center"
+                android:layout_gravity="bottom"
                 android:fontFamily="@font/lobster"
-                android:gravity="center"
+                android:paddingLeft="@dimen/margin20"
                 android:maxLines="1"
                 android:ellipsize="end"
-                android:text="Gà nướng"
+                android:text="text"
                 android:textColor="#fff"
-                android:textSize="@dimen/text_size_40" />
+                android:textSize="25dp" />
 
 
         </FrameLayout>
@@ -68,6 +70,7 @@
             android:orientation="vertical">
 
             <LinearLayout
+                android:visibility="gone"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
@@ -98,7 +101,6 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/margin10"
-                android:maxLines="3"
                 android:ellipsize="end"
                 android:fontFamily="@font/lobster"
                 android:text="Day la mo ta"
@@ -118,21 +120,83 @@
                     android:layout_weight="6"
                     android:orientation="vertical">
 
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
                     <TextView
+                        android:textSize="@dimen/margin20"
+                        android:textColor="@color/colorBlack"
+                        android:textStyle="bold"
+                        android:text="Giá: "
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content" />
+                        <TextView
+                            android:textSize="@dimen/margin20"
+                            android:textStyle="bold"
+                            android:textColor="@color/red"
+                            android:id="@+id/tvPriceProduct"
+                            android:text="Giá: "
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/margin5"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold"
+                            android:text="Size: "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
+                    <TextView
+                        android:id="@+id/tvSize"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:fontFamily="@font/oswald"
-                        android:text="@string/new_try_pickup"
-                        android:textColor="@color/colorOrange"
+                        android:text="size"
                         android:textSize="@dimen/text_size_15"
                         tools:ignore="HardcodedText" />
-
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_marginTop="@dimen/margin5"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+                        <TextView
+                            android:textColor="@color/colorBlack"
+                            android:textStyle="bold"
+                            android:text="Kho: "
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"/>
                     <TextView
+                        android:id="@+id/tvTotalamount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Kho"
+                        android:textSize="@dimen/text_size_15"
+                        tools:ignore="HardcodedText" />
+                    </LinearLayout>
+                    <TextView
+                        android:visibility="gone"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/size5dp"
-                        android:fontFamily="@font/lobster"
-                        android:text="@string/description_order_food"
+                        android:text="Vui lòng chọn size"
+                        android:textSize="@dimen/text_size_15"
+                        tools:ignore="HardcodedText" />
+
+                    <Spinner
+                        android:visibility="gone"
+                        android:layout_marginTop="@dimen/margin10"
+                        android:id="@+id/size"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/oswald"
+                        android:text="size"
+                        android:textColor="@color/colorOrange"
                         android:textSize="@dimen/text_size_15"
                         tools:ignore="HardcodedText" />
                 </LinearLayout>
@@ -220,9 +284,9 @@
             gpb:type="nexus_rotation_cross"/>
         <androidx.recyclerview.widget.RecyclerView
             android:layout_marginBottom="@dimen/margin30"
-            android:id="@+id/recyclerReview"
+            android:id="@+id/rcvComment"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="match_parent" />
         <TextView
             android:id="@+id/txtNoComment"
             android:visibility="gone"
@@ -237,3 +301,4 @@
     </LinearLayout>
 
 </androidx.core.widget.NestedScrollView>
+

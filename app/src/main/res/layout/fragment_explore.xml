@@ -42,7 +42,7 @@
                 app:popupTheme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
 
 
-               <include layout="@layout/custom_badge"/>
+                <include layout="@layout/custom_badge"/>
             </androidx.appcompat.widget.Toolbar>
 
         </com.google.android.material.appbar.CollapsingToolbarLayout>
@@ -52,6 +52,7 @@
         android:id="@+id/nestedScrollMenu"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@color/bg_app_2"
         app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
 
@@ -62,17 +63,17 @@
             android:orientation="vertical">
 
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edtSearch"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:maxLines="1"
-                    android:inputType="text"
-                    android:layout_margin="@dimen/margin10"
-                    android:imeOptions="actionSearch"
-                    android:background="@drawable/custom_edittext_round"
-                    android:drawableStart="@drawable/ic_search_24dp"
-                    android:hint="@string/search" />
+            <EditText
+                android:id="@+id/edtSearch"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:maxLines="1"
+                android:inputType="text"
+                android:layout_margin="@dimen/margin10"
+                android:imeOptions="actionSearch"
+                android:background="@drawable/custom_edittext_round"
+                android:drawableStart="@drawable/ic_search_24dp"
+                android:hint="@string/search" />
 
 
 

@@ -9,8 +9,10 @@
     <color name="colorWhite">#fff</color>
     <color name="colorOrange">#FF8C00</color>
     <color name="colorActive">#CD3EC944</color>
+    <color name="green1">#00FF00</color>
     <color name="colorStroke">#979797</color>
     <color name="colorStrokeTransparent">#75E6E5E5</color>
+    <color name="bg_app_2">#f8fbfb</color>
 
 
 </resources>

@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">VNFood</string>
+    <string name="app_name">NewClothes</string>
     <string name="login">Đăng nhập</string>
     <string name="title_login">Đăng nhập vào tài khoản</string>
     <string name="password">Mật khẩu</string>
@@ -9,22 +9,22 @@
     <string name="sign_up">Đăng ký</string>
     <string name="create_an_account">Tạo tài khoản</string>
     <string name="username">Tên</string>
-    <string name="phone">SĐT</string>
-    <string name="explore">Khám phá</string>
-    <string name="my_order">Đơn hàng</string>
+    <string name="phone">Số điện thoại</string>
+    <string name="explore">Mua sắm</string>
+    <string name="my_order">Loại quần áo</string>
     <string name="favourite">Yêu thích</string>
     <string name="profile">Tài khoản</string>
     <string name="search">Tìm kiếm</string>
     <string name="order">Đặt hàng</string>
     <string name="new_try_pickup">Mới! Đặt hàng</string>
-    <string name="description_order_food">Bạn đã sẵn sàng đặt món</string>
+    <string name="description_order_food">bạn đã sẵn sàng để đặt đơn hàng</string>
     <string name="order_now">Đặt ngay</string>
     <string name="write_comment">Viết bình luận</string>
     <string name="submit">Đăng</string>
     <string name="review">Đánh giá</string>
-    <string name="verify">Xác nhận</string>
+    <string name="verify">Thông tin cá nhân</string>
     <string name="places">Địa chỉ</string>
-    <string name="setting">Cài đặt</string>
+    <string name="setting">Đổi mật khẩu</string>
     <string name="invite_friends">Mời bạn</string>
     <string name="your_order_is_successfully">Đặt hàng thành công</string>
     <string name="cart_empty">Giỏ hàng trống</string>
@@ -32,8 +32,31 @@
     <string name="cancel">Huỷ</string>
     <string name="check_out">Thanh toán</string>
     <string name="news">Mới</string>
-    <string name="cate">Loại món</string>
+    <string name="cate">Loại Quần Áo</string>
     <string name="apply">Áp dụng</string>
     <string name="favourite_empty">Yêu thích trống</string>
     <string name="view_all">Xem tất cả</string>
+
+    <string name="new_password">Mật khẩu mới</string>
+    <string name="change_password">Đổi mật khẩu</string>
+    <string name="old_password">Mật khẩu cũ</string>
+    <string name="darkmode">DarkMode</string>
+    <string name="no_comment">Không có bình luận nào</string>
+
+    //tuấn Anh
+    <string name="bill">Hóa đơn</string>
+    <string name="address">Địa chỉ</string>
+    <string name="enter_the_password_again">Nhập lại mật khẩu mới</string>
+    <string name="confirm">Xác nhận</string>
+    <string name="NameUser">Tên người dùng:</string>
+
+    <string name="email1">Email: </string>
+    <string name="phone1">Số điện thoại:</string>
+    <string name="address1">Địa chỉ:</string>
+    <string name="Logout">Đăng xuất</string>
+
+    <string name="cart">Giỏ hàng</string>
+    <string name="addressdetail">Địa chỉ chi tiết</string>
+    <string name="lable_notify">Sản phẩm của bạn sẽ được giao trong vòng ba ngày tới</string>
+
 </resources>

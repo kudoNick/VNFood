@@ -20,7 +20,7 @@
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_gravity="center"
-            android:src="@drawable/backgr" />
+            android:src="@drawable/ic_launcher_background" />
 
         <TextView
             android:id="@+id/txtCate"
