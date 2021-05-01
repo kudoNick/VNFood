@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:gpb="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:layout_gravity="center"
+    android:layout_marginTop="@dimen/margin30"
+    android:orientation="vertical"
+    tools:context=".src.module.profile.view.ProfileFragment">
+
+    <com.jpardogo.android.googleprogressbar.library.GoogleProgressBar
+        android:id="@+id/progressBarProfile"
+        android:layout_width="50dp"
+        android:visibility="gone"
+        android:layout_height="50dp"
+        android:background="@drawable/round_icon_cart"
+        android:gravity="center"
+        gpb:layout_constraintBottom_toBottomOf="parent"
+        gpb:layout_constraintEnd_toEndOf="parent"
+        gpb:layout_constraintStart_toStartOf="parent"
+        gpb:layout_constraintTop_toTopOf="parent"
+        gpb:type="nexus_rotation_cross" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteX="0dp"
+        tools:layout_editor_absoluteY="0dp">
+
+
+        <LinearLayout
+            android:background="@color/bg_app_2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <LinearLayout
+                android:layout_margin="@dimen/margin20"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/imageProfile"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                android:src="@drawable/ic_users" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/margin20"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txtNameProfile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/oswald"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size_20"
+                    tools:text="Cameron Cook" />
+
+                <TextView
+                    android:id="@+id/txtProfile"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:background="@drawable/custom_round_10dp"
+                    android:drawableStart="@drawable/ic_check_24dp"
+                    android:drawablePadding="@dimen/size5dp"
+                    android:fontFamily="@font/oswald"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="@dimen/margin20"
+                    android:paddingTop="@dimen/size5dp"
+                    android:paddingRight="@dimen/margin20"
+                    android:paddingBottom="@dimen/size5dp"
+                    android:text="@string/verify"
+                    android:textColor="@color/colorWhite"
+                    tools:ignore="OnClick" />
+
+            </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_margin="8dp"
+                gpb:cardCornerRadius="14dp"
+                gpb:cardElevation="4dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:background="@color/white"
+                    android:id="@+id/layoutBill"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:weightSum="10">
+
+                <ImageView
+                    android:tint="@color/blue"
+                    android:layout_width="0dp"
+                    android:layout_height="40dp"
+                    android:layout_weight="2"
+                    android:src="@drawable/ic_users" />
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="6"
+                    android:fontFamily="@font/oswald"
+                    android:text="@string/bill"
+                    android:textColor="@color/colorBlack"
+                    android:textSize="@dimen/text_size_20" />
+
+                <ImageView
+                    android:layout_width="0dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:layout_weight="2"
+                    android:gravity="right"
+                    android:src="@drawable/ic_chevron_right_24dp" />
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="8dp"
+        gpb:cardCornerRadius="14dp"
+        gpb:cardElevation="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layoutChangeProfile"
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <ImageView
+                android:tint="@color/blue"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="2"
+                android:src="@drawable/ic_favorite" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:fontFamily="@font/oswald"
+                android:text="changeProfile"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_20" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:src="@drawable/ic_chevron_right_24dp" />
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+        <androidx.cardview.widget.CardView
+            android:layout_margin="8dp"
+            gpb:cardCornerRadius="14dp"
+            gpb:cardElevation="4dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:background="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="10">
+
+            <ImageView
+                android:tint="@color/blue"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="2"
+                android:src="@drawable/ic_location" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:fontFamily="@font/oswald"
+                android:text="@string/places"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_20" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:src="@drawable/ic_chevron_right_24dp" />
+
+        </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="8dp"
+        gpb:cardCornerRadius="14dp"
+        gpb:cardElevation="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/layoutChangePassword"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+            <ImageView
+                android:tint="@color/blue"
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="2"
+                android:src="@drawable/ic_change" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:fontFamily="@font/oswald"
+                android:text="@string/setting"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_20" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:src="@drawable/ic_chevron_right_24dp" />
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_margin="8dp"
+        gpb:cardCornerRadius="14dp"
+        gpb:cardElevation="4dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/lineLogout"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:weightSum="10">
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="40dp"
+                android:layout_weight="2"
+                android:tint="@color/blue"
+                android:src="@drawable/ic_logout" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="6"
+                android:fontFamily="@font/oswald"
+                android:text="@string/Logout"
+                android:textColor="@color/colorBlack"
+                android:textSize="@dimen/text_size_20" />
+
+            <ImageView
+                android:layout_width="0dp"
+                android:layout_height="30dp"
+                android:layout_gravity="center"
+                android:layout_weight="2"
+                android:gravity="right"
+                android:src="@drawable/ic_chevron_right_24dp" />
+
+    </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

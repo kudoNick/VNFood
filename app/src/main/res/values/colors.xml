@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#FF8C00</color>
+    <color name="colorPrimaryDark">#00FF8C00</color>
+    <color name="colorAccent">#FF8C00</color>
+    ****/// App ///***
+    <color name="colorBlack">#D2000000</color>
+    <color name="colorBlackTransparent">#00000000</color>
+    <color name="colorWhite">#fff</color>
+    <color name="colorOrange">#FF8C00</color>
+    <color name="colorActive">#CD3EC944</color>
+    <color name="green1">#00FF00</color>
+    <color name="colorStroke">#979797</color>
+    <color name="colorStrokeTransparent">#75E6E5E5</color>
+    <color name="bg_app_2">#f8fbfb</color>
+    <color name="Transparent1">#B3ffffff</color>
+    <color name="Transparent">#00000000</color>
+
+
+</resources>

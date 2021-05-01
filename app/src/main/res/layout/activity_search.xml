@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:background="@color/cardview_shadow_start_color"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".src.module.search.SearchActivity">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="70dp" />
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rcvShearch"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+        <Toolbar
+            android:background="@color/Transparent1"
+            android:id="@+id/toolbar_MyOrder"
+            android:layout_width="match_parent"
+            android:layout_height="?actionBarSize"
+            android:navigationIcon="@drawable/ic_keyboard_backspace_24dp"
+            android:titleTextColor="@color/colorOrange" >
+
+                <EditText
+
+                    android:textStyle="bold"
+                    android:textColor="@color/colorBlack"
+                    android:backgroundTint="@color/Transparent"
+                    android:id="@+id/edtSearch"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:drawableStart="@drawable/ic_search_24dp"
+                    android:hint="@string/search"
+                    android:imeOptions="actionSearch"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    />
+
+        </Toolbar>
+<!--        <LinearLayout-->
+<!--            android:layout_margin="@dimen/margin10"-->
+<!--            android:background="@drawable/custom_search_round"-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+<!--            <EditText-->
+<!--                android:backgroundTint="@color/Transparent"-->
+<!--                android:id="@+id/edtSearch"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:drawableStart="@drawable/ic_search_24dp"-->
+<!--                android:hint="@string/search"-->
+<!--                android:imeOptions="actionSearch"-->
+<!--                android:inputType="text"-->
+<!--                android:maxLines="1"-->
+<!--                />-->
+<!--        </LinearLayout>-->
+    </FrameLayout>
+</LinearLayout>
