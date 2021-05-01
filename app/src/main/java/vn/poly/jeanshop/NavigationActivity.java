@@ -63,7 +63,6 @@ public class NavigationActivity extends AppCompatActivity {
 
                 navigation.getMenu().getItem(position).setChecked(true);
                 prevMenuItem = navigation.getMenu().getItem(position);
-
             }
 
             @Override

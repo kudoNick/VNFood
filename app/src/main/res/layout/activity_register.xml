@@ -35,7 +35,6 @@
                 android:text="@string/create_an_account"
                 android:textSize="30sp"
                 android:fontFamily="@font/oswald"
-                android:layout_marginTop="@dimen/margin30"
                 android:textColor="@color/colorBlack"
                 android:layout_gravity="center"
                 android:layout_width="wrap_content"
@@ -72,6 +71,7 @@
                 android:layout_marginTop="@dimen/margin30"
                 android:layout_marginHorizontal="@dimen/margin30"
                 android:hint="@string/password"
+                android:password="true"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"/>
 
@@ -127,7 +127,7 @@
         <LinearLayout
             android:id="@+id/lineLoading"
             android:gravity="center"
-            android:background="#4D000000"
+            android:background="@color/bg_app_2"
             android:layout_width="match_parent"
             android:layout_height="match_parent">
             <ProgressBar

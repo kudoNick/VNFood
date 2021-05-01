@@ -73,14 +73,14 @@ public class MyOrderActivity extends AppCompatActivity implements IOnClickCart, 
     private IApiVnFood apiService = APIVnFood.getAPIVnFood().create(IApiVnFood.class);
 
     private RecyclerView recyclerProductCart;
-    private TextView txtTotalPrice, txtTotalAmount;
+    private TextView txtTotalPrice, txtTotalAmount,txtPhone;
     private LinearLayout layoutCartEmpty, layoutCart;
     private AdapterCartProvisional adapterCartProvisional;
     private Button btnCheckoutCart, btnCheckGift;
     private PresenterOrder presenterOrder;
     private TextView txtResultCheckGift,txtAddressOrderDetails;
     private TextInputEditText edtGift;
-    private int totalPrice = 0;
+    private double totalPrice = 0;
     private GoogleProgressBar progressOrder;
     ExploreFragment exploreFragmentCallback = new ExploreFragment();
 
@@ -109,6 +109,7 @@ public class MyOrderActivity extends AppCompatActivity implements IOnClickCart, 
         edtGift = findViewById(R.id.edtGift);
         progressOrder = findViewById(R.id.progressOrder);
         txtAddressOrderDetails = findViewById(R.id.txtAddressOrderDetails);
+        txtPhone = findViewById(R.id.txtPhone);
 
 
         //
@@ -119,7 +120,9 @@ public class MyOrderActivity extends AppCompatActivity implements IOnClickCart, 
                 if (response.isSuccessful()) {
                     assert response.body() != null;
                     String address = response.body().getData().getAddress();
+                    String phone = response.body().getData().getPhone();
                     txtAddressOrderDetails.setText(address);
+                    txtPhone.setText(phone);
                 } else {
                     ErrorResponse err = ErrorUtils.parseError(response);
                 }
@@ -195,17 +198,17 @@ public class MyOrderActivity extends AppCompatActivity implements IOnClickCart, 
 
 
         //Tuấn Anh
-        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm / dd-MM-yyyy", Locale.getDefault());
-        String currentDateandTime = sdf.format(new Date());
-
-        //lấy ngày mua hàng + thêm 1 ngày ra ngày ship
-        // hiện thị ngày ship lên hóa đơn
-        //cái này t mới lấy đc nhưng chưa kịp cho vào database
-        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
-        Calendar c1 = dateFormat.getCalendar();
-        c1.roll(Calendar.DAY_OF_MONTH, 1);
-        Date date = c1.getTime();
-        Toast.makeText(this, date.toString(), Toast.LENGTH_SHORT).show();
+//        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm / dd-MM-yyyy", Locale.getDefault());
+//        String currentDateandTime = sdf.format(new Date());
+//
+//        //lấy ngày mua hàng + thêm 1 ngày ra ngày ship
+//        // hiện thị ngày ship lên hóa đơn
+//        //cái này t mới lấy đc nhưng chưa kịp cho vào database
+//        SimpleDateFormat dateFormat = new SimpleDateFormat("dd-MM-yyyy");
+//        Calendar c1 = dateFormat.getCalendar();
+//        c1.roll(Calendar.DAY_OF_MONTH, 1);
+//        Date date = c1.getTime();
+//        Toast.makeText(this, date.toString(), Toast.LENGTH_SHORT).show();
 
     }
 
@@ -311,9 +314,11 @@ public class MyOrderActivity extends AppCompatActivity implements IOnClickCart, 
         txtResultCheckGift.setText("√ Giảm giá " + gift.getNumber() + " %");
         try {
 
+            totalPrice = Double.parseDouble(String.valueOf(Double.parseDouble(String.valueOf(totalPrice)) * (1 - (Double.parseDouble(gift.getNumber()) / 100))));
+
             Locale localeVN = new Locale("vi", "VN");
             NumberFormat vn = NumberFormat.getInstance(localeVN);
-            String str1 = vn.format(totalPrice * (1 - (Double.parseDouble(gift.getNumber()) / 100)));
+            String str1 = vn.format(totalPrice);
 
             txtTotalPrice.setText("Tổng tiền: " + str1 + " VNĐ");
 

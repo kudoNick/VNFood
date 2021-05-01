@@ -84,7 +84,12 @@
 
         </LinearLayout>
 
-
+        <LinearLayout
+            android:layout_marginLeft="12dp"
+            android:layout_marginRight="12dp"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
 
             <androidx.cardview.widget.CardView
                 android:layout_margin="8dp"
@@ -102,15 +107,16 @@
                     android:weightSum="10">
 
                 <ImageView
-                    android:tint="@color/blue"
+                    android:tint="@color/colorAccent"
                     android:layout_width="0dp"
-                    android:layout_height="40dp"
+                    android:layout_marginTop="4dp"
+                    android:layout_height="30dp"
                     android:layout_weight="2"
-                    android:src="@drawable/ic_users" />
+                    android:src="@drawable/ic_giohangg" />
 
                 <TextView
                     android:layout_width="0dp"
-                    android:layout_height="wrap_content"
+                    android:layout_height="40dp"
                     android:layout_weight="6"
                     android:fontFamily="@font/oswald"
                     android:text="@string/bill"
@@ -146,18 +152,19 @@
             android:weightSum="10">
 
             <ImageView
-                android:tint="@color/blue"
+                android:tint="@color/colorAccent"
                 android:layout_width="0dp"
-                android:layout_height="40dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="4dp"
                 android:layout_weight="2"
-                android:src="@drawable/ic_favorite" />
+                android:src="@drawable/ic_ch" />
 
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_weight="6"
                 android:fontFamily="@font/oswald"
-                android:text="changeProfile"
+                android:text="@string/changprofile"
                 android:textColor="@color/colorBlack"
                 android:textSize="@dimen/text_size_20" />
 
@@ -187,15 +194,16 @@
             android:weightSum="10">
 
             <ImageView
-                android:tint="@color/blue"
+                android:tint="@color/colorAccent"
                 android:layout_width="0dp"
-                android:layout_height="40dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="4dp"
                 android:layout_weight="2"
-                android:src="@drawable/ic_location" />
+                android:src="@drawable/ic_h" />
 
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_weight="6"
                 android:fontFamily="@font/oswald"
                 android:text="@string/places"
@@ -231,15 +239,16 @@
         android:weightSum="10">
 
             <ImageView
-                android:tint="@color/blue"
+                android:tint="@color/colorAccent"
                 android:layout_width="0dp"
-                android:layout_height="40dp"
+                android:layout_height="30dp"
                 android:layout_weight="2"
-                android:src="@drawable/ic_change" />
+                android:layout_marginTop="4dp"
+                android:src="@drawable/ic_account" />
 
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_weight="6"
                 android:fontFamily="@font/oswald"
                 android:text="@string/setting"
@@ -274,14 +283,15 @@
 
             <ImageView
                 android:layout_width="0dp"
-                android:layout_height="40dp"
+                android:layout_height="30dp"
+                android:layout_marginTop="4dp"
                 android:layout_weight="2"
-                android:tint="@color/blue"
-                android:src="@drawable/ic_logout" />
+                android:tint="@color/colorAccent"
+                android:src="@drawable/ic_out" />
 
             <TextView
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="40dp"
                 android:layout_weight="6"
                 android:fontFamily="@font/oswald"
                 android:text="@string/Logout"
@@ -298,6 +308,7 @@
 
     </LinearLayout>
     </androidx.cardview.widget.CardView>
+        </LinearLayout>
     </LinearLayout>
 
 

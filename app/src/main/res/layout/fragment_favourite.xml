@@ -52,7 +52,7 @@
             android:fontFamily="@font/oswald"
             android:text="@string/favourite"
             android:textColor="@color/colorOrange"
-            android:textSize="@dimen/text_size_50" />
+            android:textSize="20sp" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewFavourite"

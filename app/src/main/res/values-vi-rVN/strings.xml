@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">NewClothes</string>
+    <string name="title_splash" translatable="false">Chào mừng \n tới \n Hiệp Jean \n Shop</string>
     <string name="login">Đăng nhập</string>
     <string name="title_login">Đăng nhập vào tài khoản</string>
     <string name="password">Mật khẩu</string>
@@ -52,11 +53,13 @@
 
     <string name="email1">Email: </string>
     <string name="phone1">Số điện thoại:</string>
-    <string name="address1">Địa chỉ:</string>
+    <string name="address1">Hướng dẫn mua hàng:</string>
     <string name="Logout">Đăng xuất</string>
 
     <string name="cart">Giỏ hàng</string>
     <string name="addressdetail">Địa chỉ chi tiết</string>
     <string name="lable_notify">Sản phẩm của bạn sẽ được giao trong vòng ba ngày tới</string>
+    <string name="welcome_back" translatable="false">Chào mừng trở lại</string>
+    <string name="changprofile">Thay đổi thông tin nguời dùng</string>
 
 </resources>

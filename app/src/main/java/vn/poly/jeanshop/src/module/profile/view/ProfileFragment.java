@@ -347,9 +347,15 @@ public class ProfileFragment extends Fragment implements IViewProfile, View.OnCl
                     String address = edtaddress.getText().toString().trim() + ", " + ward + ", " + district + ", " + city;
                     String username = edtusername.getText().toString().trim();
 
+                    if (phone.isEmpty() || address.isEmpty() || username.isEmpty()){
+                        Toast.makeText(getActivity(), "Bạn vui lòng điền đầy đủ thông tin", Toast.LENGTH_SHORT).show();
+                    }else {
+                        DialogLoading.LoadingGoogle(true, progressBarProfile);
+                        presenterProfile.changeProfile(current,phone,address,username);
+                        Toast.makeText(getActivity(), "Thay đổi thông tin người dùng thành công", Toast.LENGTH_SHORT).show();
+                        dialogChanePass.dismiss();
+                    }
 
-                    DialogLoading.LoadingGoogle(true, progressBarProfile);
-                    presenterProfile.changeProfile(current,phone,address,username);
                 });
 
 

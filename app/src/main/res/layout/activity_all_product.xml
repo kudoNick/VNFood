@@ -33,7 +33,7 @@
             android:fontFamily="@font/oswald"
             android:text="@string/all_food"
             android:textColor="@color/colorOrange"
-            android:textSize="@dimen/text_size_50" />
+            android:textSize="20dp" />
         </LinearLayout>
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerViewAllFoodPaging"
