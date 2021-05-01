@@ -135,14 +135,6 @@ public class ProfileFragment extends Fragment implements IViewProfile, View.OnCl
 
     private void initView(View v) {
 
-        spinnerCity();
-        chooseSpinnerCity();
-        chooseSpinnerWard();
-
-        spiCity = v.findViewById(R.id.spiCity);
-        spiDistrict = v.findViewById(R.id.spiDistrict);
-        spiWard = v.findViewById(R.id.spiWard);
-
         presenterProfile = new PresenterProfile(this);
         txtNameProfile = v.findViewById(R.id.txtNameProfile);
         progressBarProfile = v.findViewById(R.id.progressBarProfile);
@@ -320,7 +312,6 @@ public class ProfileFragment extends Fragment implements IViewProfile, View.OnCl
 
 
     private void changeProfile() {
-
         Call<BaseResponse<User>> callProfile = apiService.getProfile();
         callProfile.enqueue(new Callback<BaseResponse<User>>() {
             @Override
@@ -343,13 +334,17 @@ public class ProfileFragment extends Fragment implements IViewProfile, View.OnCl
                 edtphone = dialogChanePass.findViewById(R.id.edtphone);
                 edtaddress = dialogChanePass.findViewById(R.id.edtaddress);
                 edtusername = dialogChanePass.findViewById(R.id.edtusername);
+                spiCity = dialogChanePass.findViewById(R.id.spiCity);
+                spiDistrict = dialogChanePass.findViewById(R.id.spiDistrict);
+                spiWard = dialogChanePass.findViewById(R.id.spiWard);
+
 
                 btnChangeProfile.setOnClickListener(v -> {
                     dialog = new Dialog(getContext());
                     dialog.setContentView(R.layout.loading);
 
                     String phone = edtphone.getText().toString().trim();
-                    String address = edtaddress.getText().toString().trim()+ ", " + ward + ", " + district + ", " + city;
+                    String address = edtaddress.getText().toString().trim() + ", " + ward + ", " + district + ", " + city;
                     String username = edtusername.getText().toString().trim();
 
 
@@ -358,6 +353,9 @@ public class ProfileFragment extends Fragment implements IViewProfile, View.OnCl
                 });
 
 
+                spinnerCity();
+                chooseSpinnerCity();
+                chooseSpinnerWard();
                 dialogChanePass.show();
 
             }

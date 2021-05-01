@@ -13,6 +13,8 @@
     <color name="colorStroke">#979797</color>
     <color name="colorStrokeTransparent">#75E6E5E5</color>
     <color name="bg_app_2">#f8fbfb</color>
+    <color name="Transparent1">#B3ffffff</color>
+    <color name="Transparent">#00000000</color>
 
 
 </resources>

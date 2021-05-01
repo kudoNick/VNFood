@@ -14,6 +14,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
+        <activity android:name=".src.module.search.SearchActivity"></activity>
         <activity android:name=".src.module.explore.view.PhotoDetailActivity"></activity>
         <activity android:name=".src.module.profileDetail.ProfileActivity" />
         <activity android:name=".src.module.billDetail.view.BillDetailActivity" />

@@ -12,6 +12,7 @@ import android.view.animation.TranslateAnimation;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.FrameLayout;
+import android.widget.TextView;
 
 import androidx.annotation.Nullable;
 import androidx.core.widget.NestedScrollView;
@@ -21,6 +22,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
 
 import com.chabbal.slidingdotsplash.SlidingSplashView;
+import com.google.gson.Gson;
 import com.jpardogo.android.googleprogressbar.library.GoogleProgressBar;
 import com.nex3z.notificationbadge.NotificationBadge;
 
@@ -39,6 +41,7 @@ import vn.poly.jeanshop.src.module.explore.presenter.IBanner;
 import vn.poly.jeanshop.src.module.explore.presenter.IProduct;
 import vn.poly.jeanshop.src.module.explore.presenter.PresenterBanner;
 import vn.poly.jeanshop.src.module.explore.presenter.PresenterProduct;
+import vn.poly.jeanshop.src.module.search.SearchActivity;
 import vn.poly.jeanshop.src.utils.DialogLoading;
 import vn.poly.jeanshop.src.utils.ItemOffsetDecoration;
 
@@ -51,11 +54,11 @@ public class ExploreFragment extends Fragment implements IProduct.IViewProduct, 
     private List<Product> products, productsNew;
     private GoogleProgressBar progressBarExplore;
     private static NotificationBadge badge;
-    private EditText edtSearch;
+    private TextView edtSearch;
     private NestedScrollView nestedScrollMenu;
     private PresenterProduct presenterProduct;
     private androidx.appcompat.widget.Toolbar toolbarExplore;
-
+    private Gson gson = new Gson();
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -115,7 +118,6 @@ public class ExploreFragment extends Fragment implements IProduct.IViewProduct, 
 
 
     private void init(View view) {
-
         nestedScrollMenu = view.findViewById(R.id.nestedScrollMenu);
         toolbarExplore = view.findViewById(R.id.toolbarExplore);
         recyclerNewFood = view.findViewById(R.id.recyclerNewFood);
@@ -148,6 +150,16 @@ public class ExploreFragment extends Fragment implements IProduct.IViewProduct, 
         presenterProduct.getNewListProduct();
 
         presenterBanner.getBanner();
+
+        edtSearch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getContext(), SearchActivity.class);
+                String s = gson.toJson(products);
+                intent.putExtra("product", s);
+                startActivity(intent);
+            }
+        });
 
     }
 
